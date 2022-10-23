@@ -1,0 +1,13 @@
+apiVersion: mygroup.myid.dev/v1alpha1
+kind: MyResource
+metadata:
+  labels:
+    app.kubernetes.io/name: myresource
+    app.kubernetes.io/instance: myresource-sample
+    app.kubernetes.io/part-of: myresource-kb
+    app.kuberentes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: myresource-kb
+  name: myresource-sample
+spec:
+  image: nginx
+  memory: 512Mi

@@ -1,0 +1,7 @@
+apiVersion: mygroup.example.com/v1alpha1
+kind: MyResource
+metadata:
+  name: myres1
+  namespace: default
+spec:
+  image: nginx

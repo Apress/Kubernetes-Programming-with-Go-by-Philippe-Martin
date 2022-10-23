@@ -1,0 +1,27 @@
+domain: myid.dev
+layout:
+- go.kubebuilder.io/v3
+projectName: myresource-kb
+repo: github.com/myid/myresource
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: myid.dev
+  group: mygroup
+  kind: MyResource
+  path: github.com/myid/myresource/api/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: myid.dev
+  group: mygroup
+  kind: MyResource
+  path: github.com/myid/myresource/api/v1beta1
+  version: v1beta1
+  webhooks:
+    conversion: true
+    webhookVersion: v1
+version: "3"
